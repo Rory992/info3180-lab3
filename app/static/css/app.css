@@ -2,6 +2,14 @@ body {
     padding-top: 5rem;
 }
 
+button {
+	color: white;
+	background-color: #1E90FF;
+	width: 120px;
+	height: 40px;
+	border-radius: 6px;
+}
+
 .flash li{
     font-size: 50px;
     color: crimson;

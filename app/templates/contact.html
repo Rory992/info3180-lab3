@@ -1,41 +1,46 @@
 {% extends "base.html" %}
 
-    {% block main %}            
-            <h1>Contact Form</h1>
+{% block css %}  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+{% endblock%}
 
-            <p>Fill in this form to contact the site owners.</p>
+{% block main %}            
+    <h1>Contact Form</h1>
+    <hr>
+
+    <p>Fill in this form to contact the site owners.</p><br>
+        
+    <form method="POST">                
+        {{ form.csrf_token }}             
+        
+        <p>{{ form.name.label }}
+            <label>(Required)</label><br>
+
+            Please enter your full name<br>
+            {{ form.name(size=40) }}
+        </p><br>
+           
+        <p>{{ form.email.label }}
+                <label>(Required)</label><br>
+           
+            Please enter your e-mail address<br>
+            {{ form.email(size=40) }}
+        </p><br>
+
+        <p>{{ form.subject.label }}
+            <label>(Required)</label><br>
             
-            <form method="POST">                
-                {{ form.csrf_token }}             
+            Please enter the subject of your message<br>
+            {{ form.subject(size=40) }}
+        </p><br>
             
-                <h5>{{ form.name.label }}
-                    <label class="required">(Required)</label>
-                </h5>
-                Please enter your full name<br/>
-                {{ form.name(size=50) }}
-
-               
-                <h5>{{ form.email.label }}
-                    <label class="required">(Required)</label>
-                </h5>
-                Please enter your e-mail address<br/>
-                {{ form.email(size=50) }}
-
-                <h5>{{ form.subject.label }}
-                    <label class="required">(Required)</label>
-                </h5>
-                Please enter the subject of your message<br/>
-                {{ form.subject(size=50) }}
-
-                
-                <h5>{{ form.message.label }}
-                    <label class="required">(Required)</label>
-                </h5>
-				<h6>
-                Please enter the message you would like to send<br/>
-                {{ form.message(size=50) }}
-                </h6>
-				
-                <button type="submit" class="button">Send</button>
-            </form>
+        <p>{{ form.message.label }}
+            <label>(Required)</label><br>             
+			
+            Please enter the message you would like to send<br>
+            {{ form.message(size=40) }}
+        </p><br>
+			
+        <button type="submit" class="button">Send</button>
+    </form>
 {% endblock %}
