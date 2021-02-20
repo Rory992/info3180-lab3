@@ -10,7 +10,7 @@ from flask import render_template, request, redirect, url_for, flash
 from app import mail
 from flask_mail import Message
 from app.forms import ContactForm
-app.secret_key = 'happy'
+app.secret_key = ''
 ###
 # Routing for your application.
 ###

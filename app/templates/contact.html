@@ -14,31 +14,31 @@
         {{ form.csrf_token }}             
         
         <p>{{ form.name.label }}
-            <label>(Required)</label><br>
+            <label id='Req'>(Required)</label><br>
 
             Please enter your full name<br>
             {{ form.name(size=40) }}
         </p><br>
            
         <p>{{ form.email.label }}
-                <label>(Required)</label><br>
+                <label id='Req'>(Required)</label><br>
            
             Please enter your e-mail address<br>
             {{ form.email(size=40) }}
         </p><br>
 
         <p>{{ form.subject.label }}
-            <label>(Required)</label><br>
+            <label id='Req'>(Required)</label><br>
             
             Please enter the subject of your message<br>
             {{ form.subject(size=40) }}
         </p><br>
             
         <p>{{ form.message.label }}
-            <label>(Required)</label><br>             
+            <label id='Req'>(Required)</label><br>             
 			
             Please enter the message you would like to send<br>
-            {{ form.message(size=40) }}
+            {{ form.message }}
         </p><br>
 			
         <button type="submit" class="button">Send</button>

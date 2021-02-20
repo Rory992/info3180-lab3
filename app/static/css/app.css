@@ -2,6 +2,10 @@ body {
     padding-top: 5rem;
 }
 
+label{
+	font-weight: bold;
+}
+
 button {
 	color: white;
 	background-color: #1E90FF;
@@ -10,7 +14,11 @@ button {
 	border-radius: 6px;
 }
 
-.flash li{
+.container .flash li {
     font-size: 50px;
     color: crimson;
+}
+
+#Req {
+	color: red;
 }
